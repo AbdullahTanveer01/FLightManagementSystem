@@ -1,0 +1,116 @@
+* {
+    box-sizing: border-box;
+  }
+  
+  html, body {
+    margin: 0;
+    padding: 0;
+  }
+  
+  body {
+    font-family: 'PT Sans', Arial, Verdana;
+    background-color: #eee;
+  }
+  
+  h1 {
+    text-align: center;
+    font-size: 48px;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    color: #222;
+  }
+  
+  .header {
+    background-color: #2c3e50;
+    position: relative;
+    z-index: 7;
+  }
+  
+  .logo {
+    text-align: center;
+    font-size: 24px;
+    color: #fff;
+  }
+  
+  .navigation {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    height: 40px;
+  }
+  
+  .navigation a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+    text-decoration: none;
+    font-size: 18px;
+    position: relative;
+  }
+  
+  .navigation a.active {
+    background-color: #e74c3c;
+    pointer-events: none;
+  }
+  
+  .slider {
+    position: absolute;
+    height: 100%;
+    width: 25%;
+    top: 0;
+    left: 0;
+    background-color: #e74c3c;
+    z-index: 8;
+    transition: left .4s, background-color .4s;
+  }
+  
+  .navigation a:nth-child(1):hover ~ .slider,
+  .navigation a:nth-child(1):focus ~ .slider,
+  .navigation a:nth-child(1):active ~ .slider {
+    left: 0;
+    background-color: #3498db;
+  }
+  
+  .navigation a:nth-child(2):hover ~ .slider,
+  .navigation a:nth-child(2):focus ~ .slider,
+  .navigation a:nth-child(2):active ~ .slider {
+    left: 25%;
+    background-color: #9b59b6;
+  }
+  
+  .navigation a:nth-child(3):hover ~ .slider,
+  .navigation a:nth-child(3):focus ~ .slider,
+  .navigation a:nth-child(3):active ~ .slider {
+    left: 50%;
+    background-color: #e67e22;
+  }
+  
+  .navigation a:nth-child(4):hover ~ .slider,
+  .navigation a:nth-child(4):focus ~ .slider,
+  .navigation a:nth-child(4):active ~ .slider {
+    left: 75%;
+    background-color: #16a085;
+  }
+  
+  .btnLogout-popup {
+    background-color: #337ab7;
+    color: #fff;
+    border: none;
+    padding: 5px 10px;
+    text-decoration: none;
+    border-radius: 4px;
+    font-size: 14px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .btnLogout-popup:hover {
+    background-color: #13558b;
+  }
+  .header{
+    background-color: silver;
+  }

@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Make Payment</title>
+  <link href="https://fonts.googleapis.com/css?family=PT+Sans:400,700" rel="stylesheet">
+</head>
+<body>
+    <header class="header">
+        <h2 class="logo">Airline Company</h2>
+        <nav class="navigation">
+          <a href="/dashboard">Home</a>
+          <a href="/contact">Contact</a>
+          <a href="/about" class="active">About Us</a>
+          <a href="/book-flight">Book Flight</a>
+          <a href="/" class="btnLogout-popup">Logout</a>
+        </nav>
+    </header>
+    
+  <div class="container">
+    <h1>Payment Information</h1>
+    <form action="/transaction-complete" method="POST" class="payment-form">
+      <label for="seatType">Select Seat Type:</label>
+      <select id="seatType" name="seatType">
+        <option value="First Class">First Class (+$100)</option>
+        <option value="Business Class">Business Class (+$40)</option>
+        <option value="Economy Class">Economy Class</option>
+      </select>
+      <br>
+      <label for="name">Name:</label>
+      <input type="text" id="name" name="name" required>
+      <br>
+      <label for="cnic">CNIC Number:</label>
+      <input type="text" id="cnic" name="cnic" required>
+      <br>
+      <label for="seats">Number of Seats:</label>
+      <input type="number" id="seats" name="seats" required>
+      <br>
+      <label for="paymentMethod">Payment Method:</label>
+      <select id="paymentMethod" name="paymentMethod">
+        <option value="Jazzcash">Jazzcash</option>
+        <option value="EasyPaisa">EasyPaisa</option>
+        <option value="Bank Account">Bank Account</option>
+      </select>
+      <br>
+      <label for="bankId">Bank ID:</label>
+      <input type="text" id="bankId" name="bankId">
+      <br>
+      <label for="expiryDate">Expiry Date:</label>
+      <input type="text" id="expiryDate" name="expiryDate">
+      <br>
+      <label for="cvv">CVV:</label>
+      <input type="text" id="cvv" name="cvv">
+      <br>
+      <label for="pin">PIN:</label>
+      <input type="password" id="pin" name="pin" maxlength="4">
+      <br>
+      <button type="submit">Submit Payment</button>
+    </form>
+  </div>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<style>
+    * {
+      box-sizing: border-box;
+    }
+  
+    html, body {
+      margin: 0;
+      padding: 0;
+    }
+  
+    body {
+      font-family: 'PT Sans', Arial, Verdana;
+      background-color: #eee;
+    }
+  
+    .header {
+      background-color: #2c3e50;
+      position: relative;
+      z-index: 7;
+      padding: 10px;
+      color: #fff;
+      text-align: center;
+    }
+  
+    .logo {
+      font-size: 24px;
+      margin: 0;
+    }
+    .navigation {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    height: 40px;
+  }
+
+  .navigation a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+    text-decoration: none;
+    font-size: 18px;
+    position: relative;
+    padding: 5px 10px;
+    transition: background-color 0.3s ease;
+  }
+
+  .navigation a.active {
+    background-color: #e74c3c;
+    pointer-events: none;
+  }
+
+  .btnLogout-popup {
+    background-color: #337ab7;
+    color: #fff;
+    border: none;
+    padding: 5px 10px;
+    text-decoration: none;
+    border-radius: 4px;
+    font-size: 14px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+
+  .btnLogout-popup:hover {
+    background-color: #13558b;
+  }
+
+  .container {
+    max-width: 500px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 4px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+    margin-top: 40px;
+  }
+
+  h1 {
+    text-align: center;
+    font-size: 48px;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    color: #222;
+  }
+
+  .payment-form {
+    margin-top: 20px;
+  }
+
+  
+
+  select,
+  input[type="text"],
+  input[type="password"],
+  input[type="number"] {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+  }
+
+  button[type="submit"] {
+    background-color: #2c3e50;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 4px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    margin-top: 20px;
+  }
+
+  button[type="submit"]:hover {
+    background-color: #1d2938;
+  }
+</style>
